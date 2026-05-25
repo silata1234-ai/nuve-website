@@ -16,6 +16,7 @@ export default function Navbar() {
           <a href="/about" className="hover:opacity-70 transition">За нас</a>
           <a href="/services" className="hover:opacity-70 transition">Услуги</a>
           <a href="/contact" className="hover:opacity-70 transition">Запази час</a>
+          <a href="/gallery" className="hover:opacity-70 transition">Галерия</a>
         </div>
 
         <button
@@ -31,6 +32,7 @@ export default function Navbar() {
           <a href="/about" className="block">За нас</a>
           <a href="/services" className="block">Услуги</a>
           <a href="/contact" className="block">Запази час</a>
+          <a href="/gallery" className="block">Галерия</a>
         </div>
       )}
     </nav>

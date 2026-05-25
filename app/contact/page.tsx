@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 export default function Contact() {
   return (
@@ -57,6 +58,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
+    
   );
 }

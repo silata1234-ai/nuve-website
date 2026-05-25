@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 export default function Services() {
   const services = [
@@ -55,6 +56,7 @@ export default function Services() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
