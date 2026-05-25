@@ -1,22 +1,8 @@
+import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F6F1EA] text-[#4E3B31]">
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F6F1EA]/85 border-b border-[#E7DED2]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="/" className="text-2xl font-semibold tracking-[0.3em]">NUVÉ</a>
-
-          <div className="flex gap-4 text-xs md:text-sm md:gap-8">
-            <a href="/about">За нас</a>
-            <a href="/services">Услуги</a>
-            <a href="/contact">Запази час</a>
-          </div>
-
-          <a href="/contact" className="bg-[#4E3B31] text-white px-5 py-2 rounded-full text-sm">
-            Запази час
-          </a>
-        </div>
-      </nav>
-
+      <Navbar />
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
         <video
           autoPlay
