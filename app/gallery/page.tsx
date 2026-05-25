@@ -2,16 +2,52 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Gallery() {
-  const items = [
-    "Hair Transformation",
-    "Balayage",
-    "Makeup Look",
-    "Bridal Beauty",
-    "Lashes",
-    "Brows",
-    "Color Work",
-    "Salon Mood",
-    "Beauty Detail",
+  const galleryItems = [
+    {
+      title: "Hair Transformation",
+      category: "Фризьорство",
+      image: "/gallery/hair-1.jpg",
+    },
+    {
+      title: "Balayage",
+      category: "Цвят",
+      image: "/gallery/hair-2.jpg",
+    },
+    {
+      title: "Makeup Look",
+      category: "Грим",
+      image: "/gallery/makeup-1.jpg",
+    },
+    {
+      title: "Bridal Beauty",
+      category: "Събития",
+      image: "/gallery/bridal-1.jpg",
+    },
+    {
+      title: "Lashes",
+      category: "Мигли",
+      image: "/gallery/lashes-1.jpg",
+    },
+    {
+      title: "Brows",
+      category: "Вежди",
+      image: "/gallery/brows-1.jpg",
+    },
+    {
+      title: "Color Work",
+      category: "Фризьорство",
+      image: "/gallery/color-1.jpg",
+    },
+    {
+      title: "Salon Mood",
+      category: "NUVÉ",
+      image: "/gallery/salon-1.jpg",
+    },
+    {
+      title: "Beauty Detail",
+      category: "Детайл",
+      image: "/gallery/detail-1.jpg",
+    },
   ];
 
   return (
@@ -20,36 +56,54 @@ export default function Gallery() {
 
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60">
+          <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60 fade-up">
             Галерия
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-10 leading-tight animate-fade-up">
+          <h1 className="text-5xl md:text-7xl font-light mb-10 leading-tight fade-up">
             Моменти,
             <br />
             създадени с внимание.
           </h1>
 
-          <p className="text-lg opacity-75 max-w-2xl mb-16 leading-relaxed">
-            Тук скоро ще добавим реални снимки от работата на екипа на NUVÉ.
+          <p className="text-lg opacity-75 max-w-2xl mb-16 leading-relaxed fade-up">
+            Галерия с визии, детайли и beauty моменти от NUVÉ.
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((item, index) => (
+            {galleryItems.map((item, index) => (
               <div
-                key={item}
-                className="group h-[420px] rounded-[2rem] bg-gradient-to-br from-[#E8DDD1] to-[#CDB9A7] overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500"
+                key={item.title}
+                className="group luxury-card h-[420px] rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] relative"
               >
-                <div className="h-full w-full flex items-end p-8 bg-black/0 group-hover:bg-black/20 transition-all duration-500">
-                  <div>
-                    <p className="text-sm uppercase tracking-[0.25em] opacity-60 mb-3">
-                      0{index + 1}
-                    </p>
-                    <h2 className="text-3xl font-light">{item}</h2>
-                  </div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="image-zoom w-full h-full object-cover"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-[#F6F1EA]">
+                  <p className="text-xs uppercase tracking-[0.25em] opacity-70 mb-3">
+                    {item.category} • 0{index + 1}
+                  </p>
+
+                  <h2 className="text-3xl font-light">
+                    {item.title}
+                  </h2>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-20 text-center">
+            <a
+              href="/contact"
+              className="inline-block bg-[#4E3B31] text-white px-10 py-4 rounded-full hover:scale-105 transition duration-300"
+            >
+              Запази час
+            </a>
           </div>
         </div>
       </section>
