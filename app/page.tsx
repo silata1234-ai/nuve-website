@@ -36,7 +36,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/about" className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full">
+            <a href="/contact" className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full">
   Запази час
 </a>
 
