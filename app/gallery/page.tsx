@@ -84,15 +84,7 @@ export default function Gallery() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-[#F6F1EA]">
-                  <p className="text-xs uppercase tracking-[0.25em] opacity-70 mb-3">
-                    {item.category} • 0{index + 1}
-                  </p>
-
-                  <h2 className="text-3xl font-light">
-                    {item.title}
-                  </h2>
-                </div>
+                
               </div>
             ))}
           </div>
