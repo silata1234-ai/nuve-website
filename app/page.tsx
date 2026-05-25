@@ -5,22 +5,27 @@ import { useState } from "react";
 export default function NuveHomepage() {
   const [bookingOpen, setBookingOpen] = useState(false);
 
+  const openBooking = () => setBookingOpen(true);
+
   return (
     <div className="min-h-screen bg-[#F6F1EA] text-[#4E3B31]">
       {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F6F1EA]/80 border-b border-[#E7DED2]">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F6F1EA]/85 border-b border-[#E7DED2]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <h1 className="text-2xl font-semibold tracking-[0.3em]">NUVÉ</h1>
+          <a href="#home" className="text-2xl font-semibold tracking-[0.3em]">
+            NUVÉ
+          </a>
 
           <div className="hidden md:flex gap-8 text-sm">
             <a href="#about" className="hover:opacity-70 transition">За нас</a>
             <a href="#services" className="hover:opacity-70 transition">Услуги</a>
             <a href="#team" className="hover:opacity-70 transition">Екип</a>
+            <a href="#booking" className="hover:opacity-70 transition">Запази час</a>
             <a href="#contact" className="hover:opacity-70 transition">Контакти</a>
           </div>
 
           <button
-            onClick={() => setBookingOpen(true)}
+            onClick={openBooking}
             className="bg-[#4E3B31] text-white px-5 py-2 rounded-full text-sm hover:opacity-90 transition"
           >
             Запази час
@@ -28,8 +33,11 @@ export default function NuveHomepage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Hero */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      >
         <video
           autoPlay
           muted
@@ -50,11 +58,11 @@ export default function NuveHomepage() {
             NUVÉ BEAUTY SALON • VARNA
           </p>
 
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8 text-[#F6F1EA]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-8 text-[#F6F1EA]">
             Красотата започва
             <br />
             с усещане.
-          </h2>
+          </h1>
 
           <p className="text-base md:text-xl text-[#F6F1EA]/85 max-w-2xl mx-auto leading-relaxed mb-10">
             Луксозно beauty пространство във Варна, създадено за стил,
@@ -63,7 +71,7 @@ export default function NuveHomepage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              onClick={() => setBookingOpen(true)}
+              onClick={openBooking}
               className="bg-[#F6F1EA] text-[#4E3B31] px-8 py-4 rounded-full hover:scale-105 transition duration-300 font-medium shadow-2xl"
             >
               Запази час
@@ -80,61 +88,84 @@ export default function NuveHomepage() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-28 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <section id="about" className="py-32 px-6 border-b border-[#E7DED2]">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
+            <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60">
               За NUVÉ
             </p>
 
-            <h3 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-light mb-8 leading-tight">
               Място за красота,
               <br />
               стил и увереност.
-            </h3>
+            </h2>
 
-            <p className="text-lg leading-relaxed opacity-80">
+            <p className="text-lg leading-relaxed opacity-80 mb-6">
               NUVÉ съчетава модерна визия, професионализъм и индивидуален
               подход. Пространство, в което всяко посещение е специално
               преживяване.
             </p>
+
+            <p className="text-lg leading-relaxed opacity-80">
+              Вярваме, че красивият резултат започва с внимание към човека,
+              неговия стил и усещането да бъде себе си.
+            </p>
           </div>
 
-          <div className="h-[500px] rounded-[2rem] bg-[#D8C8BA] shadow-2xl" />
+          <div className="rounded-[2rem] bg-[#E8DDD1] p-10 shadow-xl">
+            <p className="text-3xl md:text-4xl font-light leading-tight mb-8">
+              “Естествена красота, подчертана с финес.”
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 text-sm uppercase tracking-[0.25em] opacity-70">
+              <p>Hair</p>
+              <p>Makeup</p>
+              <p>Lashes</p>
+              <p>Brows</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Services */}
-      <section id="services" className="py-28 px-6 bg-[#EFE5DA]">
+      <section id="services" className="py-32 px-6 bg-[#EFE5DA] border-b border-[#E0D4C7]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
+          <div className="max-w-3xl mb-16">
+            <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60">
               Услуги
             </p>
 
-            <h3 className="text-4xl md:text-5xl font-light">
-              Създадени за твоя стил.
-            </h3>
+            <h2 className="text-4xl md:text-6xl font-light leading-tight">
+              Подбрани услуги за твоята визия.
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Фризьорство", items: ["Подстригване", "Боядисване", "Терапии"] },
-              { title: "Маникюр", items: ["Гел лак", "Изграждане", "Nail Art"] },
-              { title: "Вежди", items: ["Оформяне", "Ламиниране", "Боядисване"] },
-              { title: "Грим", items: ["Дневен", "Вечерен", "Булчински"] },
+              {
+                title: "Фризьорство",
+                text: "Подстригване, боядисване, балеаж, терапии и официални прически.",
+              },
+              {
+                title: "Грим",
+                text: "Естествени, вечерни, булчински и артистични визии за специални моменти.",
+              },
+              {
+                title: "Мигли и вежди",
+                text: "Ламиниране, оформяне и визии, които подчертават естественото излъчване.",
+              },
+              {
+                title: "Маникюр",
+                text: "Маникюр, гел лак, изграждане и clean beauty визии.",
+              },
             ].map((service) => (
               <div
                 key={service.title}
-                className="bg-[#F6F1EA] rounded-[2rem] p-8 hover:-translate-y-2 transition duration-300 shadow-lg"
+                className="bg-[#F6F1EA] rounded-[2rem] p-8 min-h-[280px] flex flex-col justify-between hover:-translate-y-2 transition duration-300 shadow-lg"
               >
-                <h4 className="text-2xl mb-6 font-medium">{service.title}</h4>
-
-                <div className="space-y-3 opacity-80">
-                  {service.items.map((item) => (
-                    <p key={item}>{item}</p>
-                  ))}
-                </div>
+                <h3 className="text-2xl mb-6 font-light">{service.title}</h3>
+                <p className="leading-relaxed opacity-75">{service.text}</p>
               </div>
             ))}
           </div>
@@ -142,33 +173,33 @@ export default function NuveHomepage() {
       </section>
 
       {/* Team */}
-      <section id="team" className="py-28 px-6 bg-[#F3ECE4]">
+      <section id="team" className="py-32 px-6 bg-[#F6F1EA] border-b border-[#E7DED2]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <p className="uppercase tracking-[0.4em] text-sm mb-4 opacity-60">
+            <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60">
               Екип
             </p>
 
-            <h3 className="text-5xl md:text-6xl font-light">
+            <h2 className="text-4xl md:text-6xl font-light">
               Хората зад NUVÉ
-            </h3>
+            </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12 items-start">
+          <div className="space-y-16">
             {/* Galina */}
-            <div className="bg-[#F6F1EA] rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
               <img
                 src="/galina.png"
                 alt="Галина Джилянова"
-                className="w-full h-[700px] object-cover object-top"
+                className="w-full h-[520px] object-cover object-top"
               />
 
-              <div className="p-10">
+              <div className="p-8 md:p-14">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
                   Основател • Фризьор
                 </p>
 
-                <h3 className="text-4xl font-light mb-6">
+                <h3 className="text-4xl md:text-5xl font-light mb-6">
                   Галина Джилянова
                 </h3>
 
@@ -184,7 +215,7 @@ export default function NuveHomepage() {
                 </p>
 
                 <button
-                  onClick={() => setBookingOpen(true)}
+                  onClick={openBooking}
                   className="bg-[#4E3B31] text-white px-8 py-4 rounded-full hover:scale-105 transition duration-300"
                 >
                   Запази час
@@ -193,19 +224,13 @@ export default function NuveHomepage() {
             </div>
 
             {/* Ralitsa */}
-            <div className="bg-[#F6F1EA] rounded-[2rem] overflow-hidden shadow-2xl">
-              <img
-                src="/ralica.png"
-                alt="Ралица Герова"
-                className="w-full h-[700px] object-cover object-top"
-              />
-
-              <div className="p-10">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
+              <div className="p-8 md:p-14 order-2 lg:order-1">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
                   Професионален гримьор
                 </p>
 
-                <h3 className="text-4xl font-light mb-6">
+                <h3 className="text-4xl md:text-5xl font-light mb-6">
                   Ралица Герова
                 </h3>
 
@@ -224,28 +249,34 @@ export default function NuveHomepage() {
                 </p>
 
                 <button
-                  onClick={() => setBookingOpen(true)}
+                  onClick={openBooking}
                   className="bg-[#4E3B31] text-white px-8 py-4 rounded-full hover:scale-105 transition duration-300"
                 >
                   Запази час
                 </button>
               </div>
+
+              <img
+                src="/ralica.png"
+                alt="Ралица Герова"
+                className="w-full h-[520px] object-cover object-top order-1 lg:order-2"
+              />
             </div>
 
             {/* Elizabet */}
-            <div className="bg-[#F6F1EA] rounded-[2rem] overflow-hidden shadow-2xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
               <img
                 src="/elizabet.png"
                 alt="Елизабет Костадинова"
-                className="w-full h-[700px] object-cover object-top"
+                className="w-full h-[520px] object-cover object-top"
               />
 
-              <div className="p-10">
+              <div className="p-8 md:p-14">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
                   Мигли • Вежди
                 </p>
 
-                <h3 className="text-4xl font-light mb-6">
+                <h3 className="text-4xl md:text-5xl font-light mb-6">
                   Елизабет Костадинова
                 </h3>
 
@@ -266,7 +297,7 @@ export default function NuveHomepage() {
                 </p>
 
                 <button
-                  onClick={() => setBookingOpen(true)}
+                  onClick={openBooking}
                   className="bg-[#4E3B31] text-white px-8 py-4 rounded-full hover:scale-105 transition duration-300"
                 >
                   Запази час
@@ -277,21 +308,44 @@ export default function NuveHomepage() {
         </div>
       </section>
 
-     
+      {/* Booking CTA */}
+      <section id="booking" className="py-32 px-6 bg-[#4E3B31] text-[#F6F1EA]">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-70">
+            Запази час
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-light leading-tight mb-8">
+            Готова ли си за своята нова визия?
+          </h2>
+
+          <p className="text-lg opacity-80 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Свържи се с нас директно чрез Instagram или Messenger и избери
+            удобен час за посещение.
+          </p>
+
+          <button
+            onClick={openBooking}
+            className="bg-[#F6F1EA] text-[#4E3B31] px-10 py-4 rounded-full hover:scale-105 transition duration-300 font-medium"
+          >
+            Избери начин за връзка
+          </button>
+        </div>
+      </section>
 
       {/* Contact */}
-      <section id="contact" className="py-28 px-6">
+      <section id="contact" className="py-32 px-6 bg-[#F6F1EA]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
               Контакти
             </p>
 
-            <h3 className="text-4xl md:text-5xl font-light mb-10 leading-tight">
-              Запази
+            <h2 className="text-4xl md:text-5xl font-light mb-10 leading-tight">
+              Ще ни откриеш
               <br />
-              своя час.
-            </h3>
+              във Варна.
+            </h2>
 
             <div className="space-y-6 text-lg opacity-80">
               <p>ул. Генерал Георги Попов 28</p>
@@ -302,7 +356,7 @@ export default function NuveHomepage() {
 
             <div className="flex flex-wrap gap-4 mt-10">
               <button
-                onClick={() => setBookingOpen(true)}
+                onClick={openBooking}
                 className="bg-[#4E3B31] text-white px-6 py-3 rounded-full hover:scale-105 transition duration-300"
               >
                 Запази час
