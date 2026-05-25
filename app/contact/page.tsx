@@ -4,7 +4,7 @@ export default function Contact() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F6F1EA]/85 border-b border-[#E7DED2]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="/" className="text-2xl font-semibold tracking-[0.3em]">NUVÉ</a>
-          <div className="hidden md:flex gap-8 text-sm">
+          <div className="flex gap-4 text-xs md:text-sm md:gap-8">
             <a href="/about">За нас</a>
             <a href="/services">Услуги</a>
             <a href="/contact">Запази час</a>
