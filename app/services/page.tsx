@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Services() {
+  const [openCategory, setOpenCategory] = useState("Фризьорство");
+
   const serviceGroups = [
     {
       category: "Фризьорство",
@@ -43,13 +48,13 @@ export default function Services() {
         {
           title: "Боядисване",
           items: [
-            ["Боядисване Matrix — 1 бр. боя", "23.00 €"],
-            ["Боядисване Matrix — корен", "46.00 €"],
-            ["Боядисване Matrix — цяла коса", "51.13 €"],
+            ["Matrix — 1 бр. боя", "23.00 €"],
+            ["Matrix — корен", "46.00 €"],
+            ["Matrix — цяла коса", "51.13 €"],
             ["Матиране Matrix", "46.00 €"],
-            ["Боядисване Wella — 1 бр. боя", "23.00 €"],
-            ["Боядисване Wella — корен", "46.00 €"],
-            ["Боядисване Wella — цяла коса", "51.13 €"],
+            ["Wella — 1 бр. боя", "23.00 €"],
+            ["Wella — корен", "46.00 €"],
+            ["Wella — цяла коса", "51.13 €"],
             ["Матиране Wella", "46.00 €"],
           ],
         },
@@ -79,6 +84,7 @@ export default function Services() {
     },
     {
       category: "Грим",
+      note: "Цените са с включени мигли по желание.",
       sections: [
         {
           title: "Грим в салона",
@@ -101,7 +107,6 @@ export default function Services() {
           ],
         },
       ],
-      note: "Цените са с включени мигли по желание.",
     },
     {
       category: "Маникюр",
@@ -177,7 +182,7 @@ export default function Services() {
       <Navbar />
 
       <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60 fade-up">
             Услуги
           </p>
@@ -189,63 +194,92 @@ export default function Services() {
           </h1>
 
           <p className="text-lg opacity-75 max-w-2xl mb-16 leading-relaxed fade-up">
-            Минималистичен преглед на услугите в салона. Всички цени са
-            посочени в евро.
+            Избери категория, за да разгледаш услугите. Всички цени са в евро.
           </p>
 
-          <div className="space-y-20">
-            {serviceGroups.map((group) => (
-              <div key={group.category}>
-                <div className="mb-8 flex items-end justify-between gap-6 border-b border-[#D8C8BA] pb-5">
-                  <h2 className="text-4xl md:text-5xl font-light">
-                    {group.category}
-                  </h2>
+          <div className="space-y-5">
+            {serviceGroups.map((group) => {
+              const isOpen = openCategory === group.category;
 
-                  <span className="hidden md:block uppercase tracking-[0.25em] text-xs opacity-50">
-                    NUVÉ
-                  </span>
-                </div>
+              return (
+                <div
+                  key={group.category}
+                  className="bg-[#EFE5DA] rounded-[2rem] shadow-xl overflow-hidden luxury-card"
+                >
+                  <button
+                    onClick={() =>
+                      setOpenCategory(isOpen ? "" : group.category)
+                    }
+                    className="w-full flex items-center justify-between gap-6 px-6 md:px-10 py-7 text-left"
+                  >
+                    <span className="text-3xl md:text-5xl font-light">
+                      {group.category}
+                    </span>
 
-                <div className="grid lg:grid-cols-2 gap-6">
-                  {group.sections.map((section) => (
-                    <div
-                      key={section.title}
-                      className="luxury-card bg-[#EFE5DA] rounded-[2rem] p-8 md:p-10 shadow-xl"
-                    >
-                      <h3 className="text-2xl md:text-3xl font-light mb-8">
-                        {section.title}
-                      </h3>
+                    <span
+  className={`w-11 h-11 rounded-full border border-[#4E3B31]/30 flex items-center justify-center text-3xl font-light transition-all duration-300 ${
+    isOpen
+      ? "rotate-45 bg-[#4E3B31] text-[#F6F1EA]"
+      : "bg-transparent text-[#4E3B31]"
+  }`}
+>
+  +
+</span>
+                  </button>
 
-                      <div className="space-y-4">
-                        {section.items.map(([name, price]) => (
+                  <div
+  className={`overflow-hidden transition-all ${
+    isOpen
+      ? "max-h-[5000px] opacity-100 duration-[6000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+      : "max-h-0 opacity-0 duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+  }`}
+>
+    <div className="overflow-hidden">
+        </div> 
+                    <div className="px-6 md:px-10 pb-10">
+                      <div className="grid lg:grid-cols-2 gap-6">
+                        {group.sections.map((section) => (
                           <div
-                            key={name}
-                            className="flex items-start justify-between gap-6 border-b border-[#D8C8BA]/80 pb-3"
+                            key={section.title}
+                            className="bg-[#F6F1EA] rounded-[1.5rem] p-6 md:p-8"
                           >
-                            <span className="text-base md:text-lg leading-relaxed">
-                              {name}
-                            </span>
+                            <h3 className="text-2xl md:text-3xl font-light mb-7">
+                              {section.title}
+                            </h3>
 
-                            <span className="text-base md:text-lg whitespace-nowrap opacity-80">
-                              {price}
-                            </span>
+                            <div className="space-y-4">
+                              {section.items.map(([name, price]) => (
+                                <div
+                                  key={name}
+                                  className="flex items-start justify-between gap-6 border-b border-[#D8C8BA]/80 pb-3"
+                                >
+                                  <span className="text-base md:text-lg leading-relaxed">
+                                    {name}
+                                  </span>
+
+                                  <span className="text-base md:text-lg whitespace-nowrap opacity-80">
+                                    {price}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         ))}
                       </div>
-                    </div>
-                  ))}
-                </div>
 
-                {"note" in group && group.note && (
-                  <p className="mt-6 text-sm opacity-60 italic">
-                    * {group.note}
-                  </p>
-                )}
-              </div>
-            ))}
+                      {"note" in group && group.note && (
+                        <p className="mt-6 text-sm opacity-60 italic">
+                          * {group.note}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
-          <div className="mt-24 text-center bg-[#4E3B31] text-[#F6F1EA] rounded-[2.5rem] px-8 py-16 shadow-2xl">
+          <div className="mt-20 text-center bg-[#4E3B31] text-[#F6F1EA] rounded-[2.5rem] px-8 py-16 shadow-2xl">
             <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-70">
               Запази час
             </p>
