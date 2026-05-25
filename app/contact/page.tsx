@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#F6F1EA] text-[#4E3B31] pt-24">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
       <Navbar />
 
       <section className="py-24 px-6">

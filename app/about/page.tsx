@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#F6F1EA] text-[#4E3B31] pt-24">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
       <Navbar />
 
       <section className="py-24 px-6">
@@ -21,7 +21,7 @@ export default function About() {
           </p>
 
           <div className="space-y-16">
-            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[var(--card)] rounded-[2.5rem] overflow-hidden shadow-xl">
               <img src="/galina.png" alt="Галина Джилянова" className="w-full h-[520px] object-cover object-top" />
               <div className="p-8 md:p-14">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Основател • Фризьор</p>
@@ -35,7 +35,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[var(--card)] rounded-[2.5rem] overflow-hidden shadow-xl">
               <div className="p-8 md:p-14 order-2 lg:order-1">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Професионален гримьор</p>
                 <h2 className="text-4xl md:text-5xl font-light mb-6">Ралица Герова</h2>
@@ -47,7 +47,7 @@ export default function About() {
               <img src="/ralica.png" alt="Ралица Герова" className="w-full h-[520px] object-cover object-top order-1 lg:order-2" />
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[#EFE5DA] rounded-[2.5rem] overflow-hidden shadow-xl">
+            <div className="grid lg:grid-cols-2 gap-10 items-center bg-[var(--card)] rounded-[2.5rem] overflow-hidden shadow-xl">
               <img src="/elizabet.png" alt="Елизабет Костадинова" className="w-full h-[520px] object-cover object-top" />
               <div className="p-8 md:p-14">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Мигли • Вежди</p>
