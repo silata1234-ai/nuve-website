@@ -9,7 +9,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60">За NUVÉ</p>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-10 leading-tight">
+          <h1 className="luxury-heading text-5xl md:text-7xl font-light mb-8 leading-tight fade-up">
             Място за красота,
             <br />
             стил и увереност.

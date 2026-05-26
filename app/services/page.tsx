@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 export default function Services() {
   const [openCategory, setOpenCategory] = useState("Фризьорство");
-
+const [openSection, setOpenSection] = useState("");
   const serviceGroups = [
     {
       category: "Фризьорство",
@@ -17,10 +17,7 @@ export default function Services() {
             ["Дамско — къса коса", "15.34 €"],
             ["Дамско — средна коса", "23.00 €"],
             ["Дамско — дълга коса", "28.12 €"],
-            ["Мъжко с машина", "7.67 €"],
-            ["Мъжко с машина и ножица", "10.23 €"],
-            ["Мъжко с измиване", "12.78 €"],
-            ["Детско подстригване", "10.23 €"],
+            
           ],
         },
         {
