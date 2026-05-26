@@ -5,79 +5,81 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Services() {
-  const [openCategory, setOpenCategory] = useState("Фризьорство");
-const [openSection, setOpenSection] = useState("");
+  const [openCategory, setOpenCategory] = useState("");
+const [openHairSection, setOpenHairSection] = useState("");
+  const hairSections = [
+    {
+      title: "Подстригване",
+      items: [
+        ["Дамско — къса коса", "15.34 €"],
+        ["Дамско — средна коса", "23.00 €"],
+        ["Дамско — дълга коса", "28.12 €"],
+      ],
+    },
+    {
+      title: "Стайлинг",
+      items: [
+        ["Къса коса", "12.78 €"],
+        ["Средна коса", "20.45 €"],
+        ["Дълга коса", "25.57 €"],
+        ["Сешоар на четки", "28.12 €"],
+      ],
+    },
+    {
+      title: "Прически",
+      items: [
+        ["Сватбена", "61.35 €"],
+        ["Кок", "51.10 €"],
+        ["Опашка", "51.10 €"],
+        ["Вълни", "46.00 €"],
+        ["Букли с преса", "25.56 €"],
+        ["Плитка 1 бр.", "25.56 €"],
+        ["Афро преса", "76.69 €"],
+        ["Ретро преса", "40.90 €"],
+      ],
+    },
+    {
+      title: "Боядисване",
+      items: [
+        ["Matrix — 1 бр. боя", "23.00 €"],
+        ["Matrix — корен", "46.00 €"],
+        ["Matrix — цяла коса", "51.13 €"],
+        ["Матиране Matrix", "46.00 €"],
+        ["Wella — 1 бр. боя", "23.00 €"],
+        ["Wella — корен", "46.00 €"],
+        ["Wella — цяла коса", "51.13 €"],
+        ["Матиране Wella", "46.00 €"],
+      ],
+    },
+    {
+      title: "Обезцветяване",
+      items: [
+        ["Една доза BlondorPlex, 50гр", "12.78 €"],
+        ["Труд", "35.79 €"],
+        ["Airtouch", "46.00 €"],
+      ],
+    },
+    {
+      title: "Треса",
+      items: [
+        ["С капси — до 2 реда", "20.45 €"],
+        ["С капси — до 4 реда", "25.56 €"],
+        ["На щипки", "7.67 €"],
+        ["С пришиване — до 2 реда", "23.00 €"],
+        ["С пришиване — до 1 ред", "28.12 €"],
+      ],
+    },
+    {
+      title: "Терапии за коса",
+      items: [["Терапия за коса", "30.67 €"]],
+    },
+  ];
+
   const serviceGroups = [
     {
       category: "Фризьорство",
-      sections: [
-        {
-          title: "Подстригване",
-          items: [
-            ["Дамско — къса коса", "15.34 €"],
-            ["Дамско — средна коса", "23.00 €"],
-            ["Дамско — дълга коса", "28.12 €"],
-            
-          ],
-        },
-        {
-          title: "Стайлинг",
-          items: [
-            ["Къса коса", "12.78 €"],
-            ["Средна коса", "20.45 €"],
-            ["Дълга коса", "25.57 €"],
-            ["Сешоар на четки", "28.12 €"],
-          ],
-        },
-        {
-          title: "Прически",
-          items: [
-            ["Сватбена", "61.35 €"],
-            ["Кок", "51.10 €"],
-            ["Опашка", "51.10 €"],
-            ["Вълни", "46.00 €"],
-            ["Букли с преса", "25.56 €"],
-            ["Плитка 1 бр.", "25.56 €"],
-            ["Афро преса", "76.69 €"],
-            ["Ретро преса", "40.90 €"],
-          ],
-        },
-        {
-          title: "Боядисване",
-          items: [
-            ["Matrix — 1 бр. боя", "23.00 €"],
-            ["Matrix — корен", "46.00 €"],
-            ["Matrix — цяла коса", "51.13 €"],
-            ["Матиране Matrix", "46.00 €"],
-            ["Wella — 1 бр. боя", "23.00 €"],
-            ["Wella — корен", "46.00 €"],
-            ["Wella — цяла коса", "51.13 €"],
-            ["Матиране Wella", "46.00 €"],
-          ],
-        },
-        {
-          title: "Обезцветяване",
-          items: [
-            ["Една доза BlondorPlex, 50гр", "12.78 €"],
-            ["Труд", "35.79 €"],
-            ["Airtouch", "46.00 €"],
-          ],
-        },
-        {
-          title: "Треса",
-          items: [
-            ["С капси — до 2 реда", "20.45 €"],
-            ["С капси — до 4 реда", "25.56 €"],
-            ["На щипки", "7.67 €"],
-            ["С пришиване — до 2 реда", "23.00 €"],
-            ["С пришиване — до 1 ред", "28.12 €"],
-          ],
-        },
-        {
-          title: "Терапии за коса",
-          items: [["Терапия за коса", "30.67 €"]],
-        },
-      ],
+      sections: hairSections,
+      nested: true,
     },
     {
       category: "Грим",
@@ -184,7 +186,7 @@ const [openSection, setOpenSection] = useState("");
             Услуги
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight fade-up">
+          <h1 className="luxury-heading text-5xl md:text-7xl font-light mb-8 leading-tight fade-up">
             Ценоразпис
             <br />
             NUVÉ Beauty Salon.
@@ -209,60 +211,124 @@ const [openSection, setOpenSection] = useState("");
                     }
                     className="w-full flex items-center justify-between gap-6 px-6 md:px-10 py-7 text-left"
                   >
-                    <span className="text-3xl md:text-5xl font-light">
+                    <span className="luxury-heading text-3xl md:text-5xl font-light">
                       {group.category}
                     </span>
 
                     <span
-  className={`w-11 h-11 rounded-full border border-[#4E3B31]/30 flex items-center justify-center text-3xl font-light transition-all duration-300 ${
-    isOpen
-      ? "rotate-45 bg-[#4E3B31] text-[#F6F1EA]"
-      : "bg-transparent text-[#4E3B31]"
-  }`}
->
-  +
-</span>
+                      className={`w-11 h-11 rounded-full border border-[#4E3B31]/30 flex items-center justify-center text-3xl font-light transition-all duration-300 ${
+                        isOpen
+                          ? "rotate-45 bg-[#4E3B31] text-[#F6F1EA]"
+                          : "bg-transparent text-[#4E3B31]"
+                      }`}
+                    >
+                      +
+                    </span>
                   </button>
 
                   <div
-  className={`overflow-hidden transition-all ${
-    isOpen
-      ? "max-h-[5000px] opacity-100 duration-[6000ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-      : "max-h-0 opacity-0 duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
-  }`}
->
-    <div className="overflow-hidden">
-        </div> 
+                    className={`overflow-hidden transition-all ${
+                      isOpen
+                        ? "max-h-[5000px] opacity-100 duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                        : "max-h-0 opacity-0 duration-[1500ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                    }`}
+                  >
                     <div className="px-6 md:px-10 pb-10">
-                      <div className="grid lg:grid-cols-2 gap-6">
-                        {group.sections.map((section) => (
-                          <div
-                            key={section.title}
-                            className="bg-[#F6F1EA] rounded-[1.5rem] p-6 md:p-8"
-                          >
-                            <h3 className="text-2xl md:text-3xl font-light mb-7">
-                              {section.title}
-                            </h3>
+                      {group.nested ? (
+                        <div className="space-y-4">
+                          {group.sections.map((section) => {
+                            const isHairOpen =
+                              openHairSection === section.title;
 
-                            <div className="space-y-4">
-                              {section.items.map(([name, price]) => (
-                                <div
-                                  key={name}
-                                  className="flex items-start justify-between gap-6 border-b border-[#D8C8BA]/80 pb-3"
+                            return (
+                              <div
+                                key={section.title}
+                                className="bg-[#F6F1EA] rounded-[1.5rem] overflow-hidden"
+                              >
+                                <button
+                                  onClick={() =>
+                                    setOpenHairSection(
+                                      isHairOpen ? "" : section.title
+                                    )
+                                  }
+                                  className="w-full flex items-center justify-between gap-6 p-6 md:p-8 text-left"
                                 >
-                                  <span className="text-base md:text-lg leading-relaxed">
-                                    {name}
-                                  </span>
+                                  <h3 className="luxury-heading text-2xl md:text-3xl font-light">
+                                    {section.title}
+                                  </h3>
 
-                                  <span className="text-base md:text-lg whitespace-nowrap opacity-80">
-                                    {price}
+                                  <span
+                                    className={`w-10 h-10 rounded-full border border-[#4E3B31]/20 flex items-center justify-center text-2xl transition-all duration-300 ${
+                                      isHairOpen
+                                        ? "rotate-45 bg-[#4E3B31] text-[#F6F1EA]"
+                                        : "bg-transparent text-[#4E3B31]"
+                                    }`}
+                                  >
+                                    +
                                   </span>
+                                </button>
+
+                                <div
+                                  className={`overflow-hidden transition-all ${
+                                    isHairOpen
+                                      ? "max-h-[2000px] opacity-100 duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                                      : "max-h-0 opacity-0 duration-[700ms] ease-[cubic-bezier(0.16,1,0.3,1)]"
+                                  }`}
+                                >
+                                  <div className="px-6 md:px-8 pb-8">
+                                    <div className="space-y-4">
+                                      {section.items.map(([name, price]) => (
+                                        <div
+                                          key={name}
+                                          className="flex items-start justify-between gap-6 border-b border-[#D8C8BA]/80 pb-3"
+                                        >
+                                          <span className="text-base md:text-lg leading-relaxed">
+                                            {name}
+                                          </span>
+
+                                          <span className="text-base md:text-lg whitespace-nowrap opacity-80">
+                                            {price}
+                                          </span>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
                                 </div>
-                              ))}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      ) : (
+                        <div className="grid lg:grid-cols-2 gap-6">
+                          {group.sections.map((section) => (
+                            <div
+                              key={section.title}
+                              className="bg-[#F6F1EA] rounded-[1.5rem] p-6 md:p-8"
+                            >
+                              <h3 className="luxury-heading text-2xl md:text-3xl font-light mb-7">
+                                {section.title}
+                              </h3>
+
+                              <div className="space-y-4">
+                                {section.items.map(([name, price]) => (
+                                  <div
+                                    key={name}
+                                    className="flex items-start justify-between gap-6 border-b border-[#D8C8BA]/80 pb-3"
+                                  >
+                                    <span className="text-base md:text-lg leading-relaxed">
+                                      {name}
+                                    </span>
+
+                                    <span className="text-base md:text-lg whitespace-nowrap opacity-80">
+                                      {price}
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                      </div>
+                          ))}
+                        </div>
+                      )}
 
                       {"note" in group && group.note && (
                         <p className="mt-6 text-sm opacity-60 italic">
@@ -281,7 +347,7 @@ const [openSection, setOpenSection] = useState("");
               Запази час
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-light mb-8">
+            <h2 className="luxury-heading text-4xl md:text-5xl font-light mb-8">
               Избери услуга и ни пиши.
             </h2>
 
