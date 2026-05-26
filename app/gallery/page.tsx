@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 
 export default function Gallery() {
   const galleryItems = [
-  { image: "/gallery/hair-1.jpg", height: "h-[520px]" },
+  { image: "/gallery/hair-1.jpg", desktopHeight: "md:h-[520px]" },
   { image: "/gallery/hair-2.jpg", height: "h-[380px]" },
   { image: "/gallery/makeup-1.jpg", height: "h-[460px]" },
   { image: "/gallery/bridal-1.jpg", height: "h-[560px]" },
@@ -38,8 +38,7 @@ export default function Gallery() {
             {galleryItems.map((item, index) => (
               <div
                 key={index}
-                className={`group break-inside-avoid mb-6 rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] luxury-card ${item.height}`}
-              >
+className={`group break-inside-avoid mb-6 rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] luxury-card h-[360px] md:${item.desktopHeight}`}              >
                 <img
                   src={item.image}
                   alt={`NUVÉ gallery ${index + 1}`}
