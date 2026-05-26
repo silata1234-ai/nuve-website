@@ -3,52 +3,16 @@ import Footer from "../components/Footer";
 
 export default function Gallery() {
   const galleryItems = [
-    {
-      title: "Hair Transformation",
-      category: "Фризьорство",
-      image: "/gallery/hair-1.jpg",
-    },
-    {
-      title: "Balayage",
-      category: "Цвят",
-      image: "/gallery/hair-2.jpg",
-    },
-    {
-      title: "Makeup Look",
-      category: "Грим",
-      image: "/gallery/makeup-1.jpg",
-    },
-    {
-      title: "Bridal Beauty",
-      category: "Събития",
-      image: "/gallery/bridal-1.jpg",
-    },
-    {
-      title: "Lashes",
-      category: "Мигли",
-      image: "/gallery/lashes-1.jpg",
-    },
-    {
-      title: "Brows",
-      category: "Вежди",
-      image: "/gallery/brows-1.jpg",
-    },
-    {
-      title: "Color Work",
-      category: "Фризьорство",
-      image: "/gallery/color-1.jpg",
-    },
-    {
-      title: "Salon Mood",
-      category: "NUVÉ",
-      image: "/gallery/salon-1.jpg",
-    },
-    {
-      title: "Beauty Detail",
-      category: "Детайл",
-      image: "/gallery/detail-1.jpg",
-    },
-  ];
+  { image: "/gallery/hair-1.jpg", height: "h-[520px]" },
+  { image: "/gallery/hair-2.jpg", height: "h-[380px]" },
+  { image: "/gallery/makeup-1.jpg", height: "h-[460px]" },
+  { image: "/gallery/bridal-1.jpg", height: "h-[560px]" },
+  { image: "/gallery/lashes-1.jpg", height: "h-[360px]" },
+  { image: "/gallery/brows-1.jpg", height: "h-[480px]" },
+  { image: "/gallery/color-1.jpg", height: "h-[420px]" },
+  { image: "/gallery/salon-1.jpg", height: "h-[540px]" },
+  { image: "/gallery/detail-1.jpg", height: "h-[400px]" },
+];
 
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
@@ -60,7 +24,7 @@ export default function Gallery() {
             Галерия
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-light mb-10 leading-tight fade-up">
+          <h1 className="luxury-heading text-5xl md:text-7xl font-light mb-10 leading-tight fade-up">
             Моменти,
             <br />
             създадени с внимание.
@@ -70,21 +34,17 @@ export default function Gallery() {
             Галерия с визии, детайли и beauty моменти от NUVÉ.
           </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             {galleryItems.map((item, index) => (
               <div
-                key={item.title}
-                className="group luxury-card h-[420px] rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] relative"
+                key={index}
+                className={`group break-inside-avoid mb-6 rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] luxury-card ${item.height}`}
               >
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`NUVÉ gallery ${index + 1}`}
                   className="image-zoom w-full h-full object-cover"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-
-                
               </div>
             ))}
           </div>
