@@ -22,11 +22,11 @@ export default function Contact() {
               Избери удобен начин за връзка и ни пиши директно за свободни часове.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <div className="flex gap-4 items-center mb-10">
               <a
                 href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
                 target="_blank"
-                className="bg-[#4E3B31] text-white text-center px-8 py-4 rounded-full"
+                className="bg-[#4E3B31] text-[#F6F1EA] min-w-[190px] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
               >
                 Чат в Instagram
               </a>
@@ -34,10 +34,16 @@ export default function Contact() {
               <a
                 href="https://m.me/61582631022245"
                 target="_blank"
-                className="border border-[#4E3B31] text-center px-8 py-4 rounded-full"
+                className="bg-[#4E3B31] text-[#F6F1EA] min-w-[190px] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
               >
                 Чат в Messenger
               </a>
+              <a
+  href="tel:0888104488"
+  className="bg-[#4E3B31] text-[#F6F1EA] min-w-[190px] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
+>
+  Обади ни се
+</a>
             </div>
 
             <div className="space-y-5 text-lg opacity-80">
