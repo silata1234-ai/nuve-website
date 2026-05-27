@@ -54,7 +54,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="relative h-[520px] rounded-[2rem] overflow-hidden shadow-2xl">
+          <div className="relative h-[520px] rounded-[2rem] overflow-hidden shadow-2xl lg:translate-x-10">
             <iframe
               src="https://www.google.com/maps?q=ул.+Генерал+Георги+Попов+28,+Варна,+България+9000&output=embed"
               className="w-full h-full border-0"
