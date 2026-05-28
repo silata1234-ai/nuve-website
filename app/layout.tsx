@@ -48,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="bg"
-      className={`${geist.variable} ${playfair.variable} ${bodoni.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${playfair.variable} ${bodoni.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}
