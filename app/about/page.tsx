@@ -65,7 +65,7 @@ export default function About() {
               </div>
               <div className="p-8 pt-2 md:p-14 lg:pl-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Основател • Фризьор</p>
-                <h2 className="text-4xl md:text-5xl font-light mb-6">Галина Джилянова</h2>
+                <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Галина Джилянова</h2>
                 <p className="text-lg leading-relaxed opacity-80 mb-6">
                   С повече от 10 години опит в света на фризьорството, Галина създава визии с индивидуален подход и внимание към всеки детайл.
                 </p>
@@ -78,7 +78,7 @@ export default function About() {
             <div className="team-card group grid rounded-[2.5rem] lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
               <div className="order-2 p-8 pt-2 md:p-14 lg:order-1 lg:pr-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Професионален гримьор</p>
-                <h2 className="text-4xl md:text-5xl font-light mb-6">Ралица Герова</h2>
+                <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Ралица Герова</h2>
                 <p className="text-lg leading-relaxed opacity-80 mb-6">
                   За Ралица гримът е не просто работа, а страст и изкуство, чрез което подчертава уникалната красота на всеки клиент.
                 </p>
@@ -107,7 +107,7 @@ export default function About() {
               </div>
               <div className="p-8 pt-2 md:p-14 lg:pl-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Мигли • Вежди</p>
-                <h2 className="text-4xl md:text-5xl font-light mb-6">Елизабет Костадинова</h2>
+                <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Елизабет Костадинова</h2>
                 <p className="text-lg leading-relaxed opacity-80">
                   Специалист по мигли и ламиниране на мигли и вежди, който създава визии, подчертаващи естествената нежност и чар.
                 </p>

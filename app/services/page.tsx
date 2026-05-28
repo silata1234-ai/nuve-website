@@ -93,7 +93,7 @@ export default function Services() {
     },
     {
       title: "Терапии за коса",
-      items: [["Терапия за коса", "30.67 €"]],
+      items: [["Терапия за коса/Montibello, Joico, Milkshake", "30.67 €"]],
     },
   ];
 
