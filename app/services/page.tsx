@@ -12,7 +12,7 @@ export default function Services() {
   const serviceHighlights = [
     {
       title: "Hair",
-      subtitle: "Фризьорство",
+      subtitle: "Фризьор",
       text: "Цвят, форма и стайлинг, създадени с внимание към движението и личния стил.",
     },
     {
@@ -85,7 +85,7 @@ export default function Services() {
       ],
     },
     {
-      title: "Треса",
+      title: "Удължения",
       items: [
         ["С капси — до 2 реда", "20.45 €"],
         ["С капси — до 4 реда", "25.56 €"],
@@ -102,7 +102,7 @@ export default function Services() {
 
   const serviceGroups = [
     {
-      category: "Фризьорство",
+      category: "Фризьор",
       sections: hairSections,
       nested: true,
     },
