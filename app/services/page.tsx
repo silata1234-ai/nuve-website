@@ -8,6 +8,30 @@ import Footer from "../components/Footer";
 export default function Services() {
   const [openCategory, setOpenCategory] = useState("");
   const [openHairSection, setOpenHairSection] = useState("");
+
+  const serviceHighlights = [
+    {
+      title: "Hair",
+      subtitle: "Фризьорство",
+      text: "Цвят, форма и стайлинг, създадени с внимание към движението и личния стил.",
+    },
+    {
+      title: "Makeup",
+      subtitle: "Грим",
+      text: "Мек glam, булчински визии и събитийна красота с премерен, фотогеничен финал.",
+    },
+    {
+      title: "Nails",
+      subtitle: "Маникюр",
+      text: "Чисти линии, деликатен блясък и детайл, който завършва цялостното усещане.",
+    },
+    {
+      title: "Lashes & Brows",
+      subtitle: "Мигли и вежди",
+      text: "Естествено подчертаване, баланс и изразителност без тежест.",
+    },
+  ];
+
   const hairSections = [
     {
       title: "Подстригване",
@@ -181,21 +205,60 @@ export default function Services() {
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
       <Navbar />
 
-      <section className="py-24 px-6">
+      <section className="px-6 py-20 md:py-28">
         <div className="max-w-6xl mx-auto">
           <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60 fade-up">
             Услуги
           </p>
 
-          <h1 className="luxury-heading text-5xl md:text-7xl font-light mb-8 leading-tight fade-up">
-            Ценоразпис
+          <h1 className="luxury-heading text-5xl md:text-8xl font-light mb-8 leading-[0.98] tracking-[0] fade-up">
+            Rituals of
             <br />
-            NUVÉ Beauty Salon.
+            NUVÉ Beauty.
           </h1>
 
           <p className="text-lg opacity-75 max-w-2xl mb-16 leading-relaxed fade-up">
-            Избери категория, за да разгледаш услугите. Всички цени са в евро.
+            Първо избери усещането, после разгледай детайлния ценоразпис.
+            Всички цени са в евро.
           </p>
+
+          <div className="mb-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {serviceHighlights.map((item, index) => (
+              <div
+                key={item.title}
+                className="group flex min-h-[240px] flex-col justify-between rounded-[2rem] border border-[#4E3B31]/10 bg-[#EFE5DA] p-7 shadow-[0_24px_70px_rgba(78,59,49,0.08)] transition-all duration-500 md:min-h-[270px] md:hover:-translate-y-2 md:hover:bg-[#4E3B31] md:hover:text-[#F6F1EA]"
+              >
+                <div>
+                  <p className="mb-9 text-xs uppercase tracking-[0.32em] opacity-55">
+                    0{index + 1} • {item.subtitle}
+                  </p>
+                  <h2 className="luxury-heading text-4xl font-light leading-none md:text-5xl">
+                    {item.title}
+                  </h2>
+                </div>
+
+                <p className="text-sm leading-6 opacity-75 transition-opacity duration-500 group-hover:opacity-85">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mb-8 flex flex-col gap-4 border-t border-[#4E3B31]/12 pt-10 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="mb-4 text-xs uppercase tracking-[0.35em] opacity-50">
+                Detailed pricing
+              </p>
+              <h2 className="luxury-heading text-4xl font-light leading-tight md:text-6xl">
+                Ценоразпис
+              </h2>
+            </div>
+
+            <p className="max-w-md text-sm leading-6 opacity-65 md:text-right">
+              Отвори категория, за да видиш услугите. Фризьорството съдържа
+              допълнителни подкатегории.
+            </p>
+          </div>
 
           <div className="space-y-5">
             {serviceGroups.map((group) => {
@@ -354,9 +417,12 @@ export default function Services() {
 
             <Link
               href="/contact"
-              className="inline-block bg-[#F6F1EA] text-[#4E3B31] px-10 py-4 rounded-full hover:scale-105 transition duration-300"
+              className="group premium-button border-[#F6F1EA]/30 bg-[#F6F1EA] text-[#4E3B31] hover:border-[#F6F1EA] hover:bg-transparent hover:text-[#F6F1EA]"
             >
               Свържи се с нас
+              <span className="transition-transform duration-500 group-hover:translate-x-2">
+                →
+              </span>
             </Link>
           </div>
         </div>

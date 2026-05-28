@@ -1,5 +1,7 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
@@ -52,9 +54,12 @@ export default function About() {
           <div className="space-y-20 md:space-y-28">
             <div className="team-card group grid rounded-[2.5rem] lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div className="team-portrait-stage flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:min-h-[560px] lg:-ml-8 lg:pt-16">
-                <img
+                <Image
                   src="/galina.png"
                   alt="Галина Джилянова"
+                  width={573}
+                  height={822}
+                  priority
                   className="team-portrait-image h-[390px] w-auto max-w-[92%] object-contain object-bottom md:h-[520px] lg:-mb-10"
                 />
               </div>
@@ -80,9 +85,11 @@ export default function About() {
                 <p className="italic opacity-70">“Най-благородното изкуство е да правиш другите щастливи.”</p>
               </div>
               <div className="team-portrait-stage order-1 flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:order-2 lg:-mr-8 lg:min-h-[560px] lg:pt-16">
-                <img
+                <Image
                   src="/ralica.png"
                   alt="Ралица Герова"
+                  width={597}
+                  height={798}
                   className="team-portrait-image h-[390px] w-auto max-w-[92%] object-contain object-bottom md:h-[520px] lg:-mb-10"
                 />
               </div>
@@ -90,9 +97,11 @@ export default function About() {
 
             <div className="team-card group grid rounded-[2.5rem] lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
               <div className="team-portrait-stage flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:-ml-8 lg:min-h-[560px] lg:pt-16">
-                <img
+                <Image
                   src="/elizabet.png"
                   alt="Елизабет Костадинова"
+                  width={673}
+                  height={780}
                   className="team-portrait-image h-[380px] w-auto max-w-[92%] object-contain object-bottom md:h-[510px] lg:-mb-10"
                 />
               </div>

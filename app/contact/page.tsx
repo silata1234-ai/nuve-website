@@ -27,7 +27,7 @@ export default function Contact() {
               <a
                 href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
                 target="_blank"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
+                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
               >
                 Чат в Instagram
               </a>
@@ -35,14 +35,14 @@ export default function Contact() {
               <a
                 href="https://m.me/61582631022245"
                 target="_blank"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
+                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
               >
                 Чат в Messenger
               </a>
 
               <a
                 href="tel:0888104488"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300 text-center whitespace-nowrap"
+                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
               >
                 Обади ни се
               </a>
