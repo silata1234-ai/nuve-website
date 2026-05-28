@@ -22,7 +22,7 @@ export default function Navbar() {
         <Link
           href="/"
           onClick={() => setOpenAtPath(null)}
-          className="text-2xl font-semibold tracking-[0.3em]"
+          className="logo-font text-4xl md:text-5xl text-[#4E3B31]"
         >
           NUVÉ
         </Link>

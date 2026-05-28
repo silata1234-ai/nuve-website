@@ -1,3 +1,4 @@
+import { Bodoni_Moda } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
@@ -5,6 +6,11 @@ import FloatingBookingButton from "./components/FloatingBookingButton";
 import "./globals.css";
 
 
+const bodoni = Bodoni_Moda({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-bodoni",
+});
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin", "cyrillic"],
@@ -42,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="bg"
-      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${playfair.variable} h-full antialiased`}
+      className={`${geist.variable} ${playfair.variable} ${bodoni.variable}`}
     >
       <body className="min-h-full flex flex-col">
         {children}
