@@ -73,7 +73,7 @@ body::before {
 }
 
 .luxury-body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 .reveal {
