@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 export default function Gallery() {
   const galleryItems = [
@@ -69,12 +70,12 @@ export default function Gallery() {
           </div>
 
           <div className="mt-16 md:mt-20 text-center">
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-[#4E3B31] text-white px-10 py-4 rounded-full hover:scale-105 transition duration-300"
             >
               Запази час
-            </a>
+            </Link>
           </div>
         </div>
       </section>

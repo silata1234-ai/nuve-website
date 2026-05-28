@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Services() {
   const [openCategory, setOpenCategory] = useState("");
-const [openHairSection, setOpenHairSection] = useState("");
+  const [openHairSection, setOpenHairSection] = useState("");
   const hairSections = [
     {
       title: "Подстригване",
@@ -351,12 +352,12 @@ const [openHairSection, setOpenHairSection] = useState("");
               Избери услуга и ни пиши.
             </h2>
 
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-[#F6F1EA] text-[#4E3B31] px-10 py-4 rounded-full hover:scale-105 transition duration-300"
             >
               Свържи се с нас
-            </a>
+            </Link>
           </div>
         </div>
       </section>

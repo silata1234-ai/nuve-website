@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-[#3F2F27] text-[#F6F1EA] px-6 py-16">
@@ -18,21 +20,21 @@ export default function Footer() {
           </h3>
 
           <div className="space-y-3">
-            <a href="/about" className="block hover:opacity-70 transition">
+            <Link href="/about" className="block hover:opacity-70 transition">
               За нас
-            </a>
+            </Link>
 
-            <a href="/services" className="block hover:opacity-70 transition">
+            <Link href="/services" className="block hover:opacity-70 transition">
               Услуги
-            </a>
+            </Link>
 
-            <a href="/gallery" className="block hover:opacity-70 transition">
+            <Link href="/gallery" className="block hover:opacity-70 transition">
               Галерия
-            </a>
+            </Link>
 
-            <a href="/contact" className="block hover:opacity-70 transition">
+            <Link href="/contact" className="block hover:opacity-70 transition">
               Запази час
-            </a>
+            </Link>
           </div>
         </div>
 

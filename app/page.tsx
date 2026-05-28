@@ -1,5 +1,7 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F6F1EA] text-[#4E3B31]">
@@ -36,13 +38,19 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full">
-  Запази час
-</a>
+            <Link
+              href="/contact"
+              className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full"
+            >
+              Запази час
+            </Link>
 
-            <a href="/about" className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full">
+            <Link
+              href="/about"
+              className="border border-[#F6F1EA]/70 text-[#F6F1EA] px-8 py-4 rounded-full"
+            >
               Разгледай салона
-            </a>
+            </Link>
           </div>
         </div>
       </section>

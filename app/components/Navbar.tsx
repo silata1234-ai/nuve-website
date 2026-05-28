@@ -1,26 +1,49 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+const navItems = [
+  { href: "/about", label: "За нас" },
+  { href: "/services", label: "Услуги" },
+  { href: "/gallery", label: "Галерия" },
+  { href: "/contact", label: "Запази час" },
+];
+
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const [openAtPath, setOpenAtPath] = useState<string | null>(null);
+  const open = openAtPath === pathname;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#F6F1EA]/90 border-b border-[#E7DED2]">
+    <nav className="fixed top-0 left-0 right-0 z-[80] backdrop-blur-md bg-[#F6F1EA]/90 border-b border-[#E7DED2]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" className="text-2xl font-semibold tracking-[0.3em]">
+        <Link
+          href="/"
+          onClick={() => setOpenAtPath(null)}
+          className="text-2xl font-semibold tracking-[0.3em]"
+        >
           NUVÉ
-        </a>
+        </Link>
 
         <div className="hidden md:flex gap-8 text-sm">
-          <a href="/about" className="hover:opacity-70 transition">За нас</a>
-          <a href="/services" className="hover:opacity-70 transition">Услуги</a>
-          <a href="/gallery" className="hover:opacity-70 transition">Галерия</a>
-          <a href="/contact" className="hover:opacity-70 transition">Запази час</a>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="hover:opacity-70 transition"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
         <button
-          onClick={() => setOpen(!open)}
+          type="button"
+          onClick={() => setOpenAtPath(open ? null : pathname)}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
           className="md:hidden relative w-8 h-8 flex flex-col justify-center items-center gap-1.5"
           aria-label="Меню"
         >
@@ -43,15 +66,24 @@ export default function Navbar() {
       </div>
 
       <div
+        id="mobile-menu"
         className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${
-          open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          open
+            ? "max-h-80 opacity-100 pointer-events-auto"
+            : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         <div className="bg-[#F6F1EA] border-t border-[#E7DED2] px-6 py-6 space-y-5 text-lg shadow-xl">
-          <a href="/about" className="block hover:translate-x-2 transition duration-300">За нас</a>
-          <a href="/services" className="block hover:translate-x-2 transition duration-300">Услуги</a>
-          <a href="/gallery" className="block hover:translate-x-2 transition duration-300">Галерия</a>
-          <a href="/contact" className="block hover:translate-x-2 transition duration-300">Запази час</a>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpenAtPath(null)}
+              className="block hover:translate-x-2 transition duration-300"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
     </nav>
