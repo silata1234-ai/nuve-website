@@ -1,7 +1,15 @@
+import { Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
 import FloatingBookingButton from "./components/FloatingBookingButton";
 import "./globals.css";
+
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
