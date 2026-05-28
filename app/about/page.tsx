@@ -66,10 +66,10 @@ export default function About() {
               <div className="p-8 pt-2 md:p-14 lg:pl-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Основател • Фризьор</p>
                 <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Галина Джилянова</h2>
-                <p className="text-lg leading-relaxed opacity-80 mb-6">
+                <p className="playfair text-lg leading-relaxed opacity-80">
                   С повече от 10 години опит в света на фризьорството, Галина създава визии с индивидуален подход и внимание към всеки детайл.
                 </p>
-                <p className="text-lg leading-relaxed opacity-80">
+                <p className="playfair text-lg leading-relaxed opacity-80">
                   Специализира в цветови трансформации, балеажи и модерни техники за коса.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export default function About() {
               <div className="order-2 p-8 pt-2 md:p-14 lg:order-1 lg:pr-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Професионален гримьор</p>
                 <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Ралица Герова</h2>
-                <p className="text-lg leading-relaxed opacity-80 mb-6">
+                <p className="playfair text-lg leading-relaxed opacity-80">
                   За Ралица гримът е не просто работа, а страст и изкуство, чрез което подчертава уникалната красота на всеки клиент.
                 </p>
                 <p className="italic opacity-70">“Най-благородното изкуство е да правиш другите щастливи.”</p>
@@ -108,7 +108,7 @@ export default function About() {
               <div className="p-8 pt-2 md:p-14 lg:pl-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Мигли • Вежди</p>
                 <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Елизабет Костадинова</h2>
-                <p className="text-lg leading-relaxed opacity-80">
+                <p className="playfair text-lg leading-relaxed opacity-80">
                   Специалист по мигли и ламиниране на мигли и вежди, който създава визии, подчертаващи естествената нежност и чар.
                 </p>
               </div>
