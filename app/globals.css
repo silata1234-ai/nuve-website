@@ -216,3 +216,6 @@ body::before {
     transition-duration: 0.01ms !important;
   }
 }
+.playfair {
+  font-family: var(--font-playfair);
+}
