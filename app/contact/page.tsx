@@ -73,7 +73,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-6 flex justify-center gap-4">
+          <div className="mt-6 flex justify-center gap-16 md:gap-12">
   <a
     href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
     target="_blank"
@@ -112,9 +112,11 @@ export default function Contact() {
   </a>
 </div>
 
-<p className="mt-4 text-center text-[11px] uppercase tracking-[0.3em] opacity-50">
-  Instagram • Messenger • Call
-</p>          </div>      </section>
+<div className="mt-4 flex justify-center gap-8 text-[10px] uppercase opacity-60">
+  <span className="w-20 text-center tracking-[0.15em]">Instagram</span>
+  <span className="w-20 text-center tracking-[0.15em]">Messenger</span>
+  <span className="w-20 text-center tracking-[0.15em]">Call</span>
+</div>          </div>      </section>
 
       <Footer />
     </div>
