@@ -112,11 +112,7 @@ export default function Contact() {
   </a>
 </div>
 
-<div className="mt-4 flex justify-center gap-8 text-[10px] uppercase opacity-60">
-  <span className="w-20 text-center tracking-[0.15em]">Instagram</span>
-  <span className="w-20 text-center tracking-[0.15em]">Messenger</span>
-  <span className="w-20 text-center tracking-[0.15em]">Call</span>
-</div>          </div>      </section>
+         </div>      </section>
 
       <Footer />
     </div>
