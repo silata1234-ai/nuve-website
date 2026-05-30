@@ -148,7 +148,7 @@ export default function Gallery() {
                   <img
                     src={image}
                     alt={`${activeCategory.title} ${index + 1}`}
-                    className="w-full h-full object-cover"
+                    className="block w-full h-full object-cover"
                   />
                 </div>
               ))}
