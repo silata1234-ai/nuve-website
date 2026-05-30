@@ -1,68 +1,102 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Image from "next/image";
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
       <Navbar />
 
-      <section className="py-16 md:py-24 px-5 md:px-6">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-xs md:text-sm mb-5 opacity-60">
-              Запази час • Контакти
-            </p>
+      <section className="px-5 py-16 md:px-6 md:py-24">
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-5 text-xs uppercase tracking-[0.35em] opacity-60 md:text-sm">
+            Запази час • Контакти
+          </p>
 
-            <h1 className="luxury-heading text-4xl md:text-7xl font-light mb-8 md:mb-10 leading-tight">
-              Свържи се
-              <br />
-              с NUVÉ.
-            </h1>
+          <h1 className="luxury-heading mb-8 text-5xl font-light leading-[0.95] md:text-8xl">
+            Посети
+            <br />
+            NUVÉ.
+          </h1>
 
-            <p className="text-base md:text-lg opacity-80 mb-8 md:mb-10 leading-relaxed">
-              Избери удобен начин за връзка и ни пиши директно за свободни часове.
-            </p>
+          <p className="playfair mb-10 max-w-2xl text-lg leading-relaxed opacity-75 md:text-xl">
+            Beauty пространство във Варна, създадено за спокойствие, стил и
+            внимание към всеки детайл.
+          </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
-              <a
-                href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
-                target="_blank"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
-              >
-                Чат в Instagram
-              </a>
+          <div className="overflow-hidden rounded-[2rem] shadow-2xl md:rounded-[2.75rem]">
+            <div className="relative h-[430px] md:h-[720px]">
+              <Image
+                src="/salon.jpg"
+                alt="NUVÉ Beauty Salon"
+                fill
+                priority
+                className="object-cover"
+              />
 
-              <a
-                href="https://m.me/61582631022245"
-                target="_blank"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
-              >
-                Чат в Messenger
-              </a>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
 
-              <a
-                href="tel:0888104488"
-                className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full transition duration-300 text-center whitespace-nowrap md:hover:scale-105"
-              >
-                Обади ни се
-              </a>
-            </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-[#F6F1EA] md:p-10">
+                <p className="mb-3 text-xs uppercase tracking-[0.3em] opacity-75">
+                  NUVÉ Beauty Salon • Varna
+                </p>
 
-            <div className="space-y-4 md:space-y-5 text-base md:text-lg opacity-80">
-              <p>ул. Генерал Георги Попов 28</p>
-              <p>Варна, България 9000</p>
-              <p>Работно време: 10:00 – 18:00</p>
-              <p>0888 104 488</p>
+                <h2 className="luxury-heading mb-5 text-4xl font-light md:text-6xl">
+                  ул. Генерал Георги Попов 28
+                </h2>
+
+                <p className="mb-6 max-w-xl text-sm leading-relaxed opacity-85 md:text-base">
+                  Варна, България 9000 • Работно време: 10:00 – 18:00
+                </p>
+
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=ул.+Генерал+Георги+Попов+28,+Варна,+България+9000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-[#F6F1EA] px-6 py-4 text-center text-sm uppercase tracking-[0.2em] text-[#4E3B31] transition duration-300 hover:scale-105"
+                  >
+                    Отвори в Maps →
+                  </a>
+
+                  <a
+                    href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#F6F1EA]/60 px-6 py-4 text-center text-sm uppercase tracking-[0.2em] text-[#F6F1EA] transition duration-300 hover:bg-[#F6F1EA] hover:text-[#4E3B31]"
+                  >
+                    Запази час
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="relative h-[340px] md:h-[520px] rounded-[2rem] overflow-hidden shadow-2xl lg:translate-x-10">
-            <iframe
-              src="https://www.google.com/maps?q=ул.+Генерал+Георги+Попов+28,+Варна,+България+9000&output=embed"
-              className="w-full h-full border-0 grayscale-[20%] sepia-[18%] saturate-[80%] contrast-[95%]"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <a
+              href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
+            >
+              Чат в Instagram
+            </a>
+
+            <a
+              href="https://m.me/61582631022245"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
+            >
+              Чат в Messenger
+            </a>
+
+            <a
+              href="tel:0888104488"
+              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
+            >
+              Обади ни се
+            </a>
           </div>
         </div>
       </section>
