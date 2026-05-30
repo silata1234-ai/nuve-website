@@ -225,17 +225,28 @@ body::before {
   letter-spacing: -0.06em;
 }
 @keyframes gallerySlide {
-  0%, 28% {
+  0% {
+    opacity: 0;
+  }
+  6% {
     opacity: 1;
   }
-  33%, 95% {
+  30% {
+    opacity: 1;
+  }
+  36% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 .gallery-slide {
+  opacity: 0;
   animation: gallerySlide 9s infinite;
+}
+
+.gallery-slide:first-child {
+  opacity: 1;
 }
