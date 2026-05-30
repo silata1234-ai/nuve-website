@@ -38,17 +38,9 @@ export default function Contact() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
 
               <div className="absolute bottom-0 left-0 right-0 p-6 text-[#DCC8B2] md:p-10">
-                <p className="mb-3 text-xs uppercase tracking-[0.3em] opacity-75">
-                  NUVÉ Beauty Salon • Varna
-                </p>
+                
 
-                <h2 className="luxury-heading mb-5 text-4xl font-light md:text-6xl">
-                  ул. Генерал Георги Попов 28
-                </h2>
-
-                <p className="mb-6 max-w-xl text-sm leading-relaxed opacity-85 md:text-base">
-                  Варна, България 9000 • Работно време: 10:00 – 18:00
-                </p>
+                
 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
@@ -72,6 +64,15 @@ export default function Contact() {
               </div>
             </div>
           </div>
+          <div className="mt-8 text-center">
+  <h3 className="luxury-heading text-3xl md:text-4xl font-light text-[#4E3B31]">
+    ул. Генерал Георги Попов 28
+  </h3>
+
+  <p className="mt-3 text-sm uppercase tracking-[0.2em] text-[#4E3B31]/65">
+    Варна • България 9000 • 10:00 – 18:00
+  </p>
+</div>
 
           <div className="mt-6 flex justify-center gap-16 md:gap-12">
   <a
