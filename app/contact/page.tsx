@@ -73,34 +73,48 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            <a
-              href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
-            >
-              Чат в Instagram
-            </a>
+          <div className="mt-6 flex justify-center gap-4">
+  <a
+    href="https://www.instagram.com/_nuve_by_galinadzhilyanov/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+    className="flex h-16 w-16 items-center justify-center rounded-full border border-[#4E3B31]/15 bg-[#EFE5DA] text-[#4E3B31] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+  >
+    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  </a>
 
-            <a
-              href="https://m.me/61582631022245"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
-            >
-              Чат в Messenger
-            </a>
+  <a
+    href="https://m.me/61582631022245"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Messenger"
+    className="flex h-16 w-16 items-center justify-center rounded-full border border-[#4E3B31]/15 bg-[#EFE5DA] text-[#4E3B31] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+  >
+    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+      <path d="M12 3C7 3 3.2 6.4 3.2 10.8c0 2.5 1.2 4.7 3.2 6.1V21l3.4-1.9c.7.2 1.4.3 2.2.3 5 0 8.8-3.4 8.8-7.8S17 3 12 3Z" />
+      <path d="m7.8 12.5 2.7-2.9 2.1 2.2 3.6-3.1-2.8 4.4-2.2-2.1-3.4 1.5Z" fill="currentColor" stroke="none" />
+    </svg>
+  </a>
 
-            <a
-              href="tel:0888104488"
-              className="rounded-full bg-[#4E3B31] px-5 py-4 text-center text-[#F6F1EA] transition duration-300 hover:scale-105"
-            >
-              Обади ни се
-            </a>
-          </div>
-        </div>
-      </section>
+  <a
+    href="tel:0888104488"
+    aria-label="Phone"
+    className="flex h-16 w-16 items-center justify-center rounded-full border border-[#4E3B31]/15 bg-[#EFE5DA] text-[#4E3B31] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+  >
+    <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M6.6 4.8 8.8 4c.7-.2 1.4.1 1.7.7l1 2.2c.2.5.1 1.1-.3 1.5l-1.1 1.1c.8 1.7 2.2 3.1 3.9 3.9l1.1-1.1c.4-.4 1-.5 1.5-.3l2.2 1c.6.3.9 1 .7 1.7l-.8 2.2c-.2.6-.8 1-1.4 1C10.9 18 6 13.1 6 6.2c0-.6.4-1.2.6-1.4Z" />
+    </svg>
+  </a>
+</div>
+
+<p className="mt-4 text-center text-[11px] uppercase tracking-[0.3em] opacity-50">
+  Instagram • Messenger • Call
+</p>          </div>      </section>
 
       <Footer />
     </div>

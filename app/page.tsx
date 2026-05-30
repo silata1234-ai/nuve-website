@@ -125,7 +125,7 @@ export default function Home() {
             <div className="space-y-4 md:space-y-5">
               <div className="group relative h-56 overflow-hidden rounded-[2rem] bg-[#E8DDD1] shadow-[0_24px_70px_rgba(78,59,49,0.1)] md:h-80">
                 <Image
-                  src="/gallery/hair-1.jpg"
+                  src="/gallery/hair1.jpg"
                   alt="NUVÉ hair artistry"
                   fill
                   sizes="(max-width: 768px) 50vw, 33vw"
@@ -145,7 +145,7 @@ export default function Home() {
             <div className="mt-10 space-y-4 md:mt-16 md:space-y-5">
               <div className="group relative h-48 overflow-hidden rounded-[2rem] bg-[#E8DDD1] shadow-[0_24px_70px_rgba(78,59,49,0.1)] md:h-72">
                 <Image
-                  src="/gallery/makeup-1.jpg"
+                  src="/gallery/makeup1.jpg"
                   alt="NUVÉ soft glam"
                   fill
                   sizes="(max-width: 768px) 50vw, 33vw"
@@ -154,7 +154,7 @@ export default function Home() {
               </div>
               <div className="group relative h-56 overflow-hidden rounded-[2rem] bg-[#E8DDD1] shadow-[0_24px_70px_rgba(78,59,49,0.1)] md:h-80">
                 <Image
-                  src="/gallery/lashes-1.jpg"
+                  src="/gallery/lashes1.jpg"
                   alt="NUVÉ lash styling"
                   fill
                   sizes="(max-width: 768px) 50vw, 33vw"
