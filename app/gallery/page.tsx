@@ -36,7 +36,7 @@ export default function Gallery() {
       label: "Мигли и вежди",
       title: "Lashes & Brows",
       description: "Естествено подчертаване, баланс и изразителност без тежест.",
-      images: Array.from({ length: 6 }, (_, i) => `/gallery/lashes/lashes${i + 1}.jpg`),
+      images: Array.from({ length: 7 }, (_, i) => `/gallery/lashes/lashes${i + 1}.jpg`),
     },
   ];
 
