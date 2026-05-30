@@ -37,7 +37,7 @@ export default function Contact() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-[#F6F1EA] md:p-10">
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-[#DCC8B2] md:p-10">
                 <p className="mb-3 text-xs uppercase tracking-[0.3em] opacity-75">
                   NUVÉ Beauty Salon • Varna
                 </p>
