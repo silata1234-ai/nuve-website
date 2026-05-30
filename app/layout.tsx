@@ -2,7 +2,7 @@ import { Bodoni_Moda } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Geist, Geist_Mono } from "next/font/google";
-import FloatingBookingButton from "./components/FloatingBookingButton";
+
 import "./globals.css";
 
 
@@ -52,7 +52,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
-        <FloatingBookingButton />
+        
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
