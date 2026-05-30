@@ -224,3 +224,18 @@ body::before {
   font-weight: 500;
   letter-spacing: -0.06em;
 }
+@keyframes gallerySlide {
+  0%, 28% {
+    opacity: 1;
+  }
+  33%, 95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.gallery-slide {
+  animation: gallerySlide 9s infinite;
+}

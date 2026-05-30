@@ -72,6 +72,23 @@ export default function About() {
                 <p className="playfair text-lg leading-relaxed opacity-80">
                   Специализира в цветови трансформации, балеажи и модерни техники за коса.
                 </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="INSTAGRAM_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="/gallery"
+    className="border border-[#4E3B31]/20 px-5 py-3 rounded-full hover:bg-[#4E3B31] hover:text-[#F6F1EA] transition duration-300"
+  >
+    Портфолио
+  </a>
+</div>
               </div>
             </div>
 
@@ -83,6 +100,23 @@ export default function About() {
                   За Ралица гримът е не просто работа, а страст и изкуство, чрез което подчертава уникалната красота на всеки клиент.
                 </p>
                 <p className="italic opacity-70">“Най-благородното изкуство е да правиш другите щастливи.”</p>
+                <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="INSTAGRAM_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="/gallery"
+    className="border border-[#4E3B31]/20 px-5 py-3 rounded-full hover:bg-[#4E3B31] hover:text-[#F6F1EA] transition duration-300"
+  >
+    Портфолио
+  </a>
+</div>
               </div>
               <div className="team-portrait-stage order-1 flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:order-2 lg:-mr-8 lg:min-h-[560px] lg:pt-16">
                 <Image
@@ -111,12 +145,78 @@ export default function About() {
                 <p className="playfair text-lg leading-relaxed opacity-80">
                   Специалист по мигли и ламиниране на мигли и вежди, който създава визии, подчертаващи естествената нежност и чар.
                 </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="INSTAGRAM_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="/gallery"
+    className="border border-[#4E3B31]/20 px-5 py-3 rounded-full hover:bg-[#4E3B31] hover:text-[#F6F1EA] transition duration-300"
+  >
+    Портфолио
+  </a>
+</div>
               </div>
             </div>
+            <div className="team-card group grid rounded-[2.5rem] lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+  <div className="order-2 p-8 pt-2 md:p-14 lg:order-1 lg:pr-8">
+    <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">
+      Маникюрист
+    </p>
+
+    <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">
+      Християна Стоянова
+    </h2>
+
+    <p className="playfair text-lg leading-relaxed opacity-80">
+  Християна съчетава прецизност, естетика и внимание към всеки детайл,
+  създавайки елегантни и стилни маникюри.
+</p>
+
+<p className="playfair text-lg leading-relaxed opacity-80">
+  За нея красивите ръце са естествен завършек на безупречната визия и
+  отражение на индивидуалния стил.
+</p>
+<div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="INSTAGRAM_LINK"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
+  >
+    Instagram
+  </a>
+
+  <a
+    href="/gallery"
+    className="border border-[#4E3B31]/20 px-5 py-3 rounded-full hover:bg-[#4E3B31] hover:text-[#F6F1EA] transition duration-300"
+  >
+    Портфолио
+  </a>
+</div>
+  </div>
+
+  <div className="team-portrait-stage order-1 flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:order-2 lg:-mr-8 lg:min-h-[560px] lg:pt-16">
+    <Image
+      src="/hristiyana.png"
+      alt="Християна Стоянова"
+      width={673}
+      height={780}
+      className="team-portrait-image h-[390px] w-auto max-w-[92%] object-contain object-bottom md:h-[520px] lg:-mb-10"
+    />
+  </div>
+</div>
           </div>
         </div>
       </section>
       <Footer />
     </div>
+    
   );
 }

@@ -1,149 +1,176 @@
+"use client";
+
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Gallery() {
-  const galleryItems = [
+  const categories = [
     {
-      image: "/gallery/hair-1.jpg",
-      label: "Hair artistry",
-      desktopHeight: 520,
-      mobileHeight: 240,
+      id: "hair",
+      index: "01",
+      label: "Фризьор",
+      title: "Hair",
+      description: "Цвят, форма и стайлинг, създадени с внимание към движението и личния стил.",
+      images: ["/gallery/hair-1.jpg", "/gallery/hair-2.jpg", "/gallery/color-1.jpg"],
     },
     {
-      image: "/gallery/hair-2.jpg",
-      label: "Soft styling",
-      desktopHeight: 380,
-      mobileHeight: 200,
+      id: "makeup",
+      index: "02",
+      label: "Грим",
+      title: "Makeup",
+      description: "Soft glam, булчински визии и събитийна красота с премерен, фотогеничен финал.",
+      images: ["/gallery/makeup-1.jpg", "/gallery/bridal-1.jpg"],
     },
     {
-      image: "/gallery/makeup-1.jpg",
-      label: "Soft glam",
-      desktopHeight: 460,
-      mobileHeight: 230,
+      id: "nails",
+      index: "03",
+      label: "Маникюр",
+      title: "Nails",
+      description: "Чисти линии, деликатен блясък и детайл, който завършва цялостното усещане.",
+      images: ["/gallery/detail-1.jpg", "/gallery/salon-1.jpg"],
     },
     {
-      image: "/gallery/bridal-1.jpg",
-      label: "Bridal detail",
-      desktopHeight: 560,
-      mobileHeight: 260,
-    },
-    {
-      image: "/gallery/lashes-1.jpg",
-      label: "Lash styling",
-      desktopHeight: 360,
-      mobileHeight: 190,
-    },
-    {
-      image: "/gallery/brows-1.jpg",
-      label: "Brows",
-      desktopHeight: 480,
-      mobileHeight: 240,
-    },
-    {
-      image: "/gallery/color-1.jpg",
-      label: "Color work",
-      desktopHeight: 420,
-      mobileHeight: 210,
-    },
-    {
-      image: "/gallery/salon-1.jpg",
-      label: "Salon mood",
-      desktopHeight: 540,
-      mobileHeight: 250,
-    },
-    {
-      image: "/gallery/detail-1.jpg",
-      label: "Beauty detail",
-      desktopHeight: 400,
-      mobileHeight: 200,
+      id: "lashes",
+      index: "04",
+      label: "Мигли и вежди",
+      title: "Lashes & Brows",
+      description: "Естествено подчертаване, баланс и изразителност без тежест.",
+      images: ["/gallery/lashes-1.jpg", "/gallery/brows-1.jpg"],
     },
   ];
+
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--dark)] pt-24">
       <Navbar />
 
-      <section className="px-5 py-20 md:px-6 md:py-28">
+      <section className="py-20 md:py-24 px-5 md:px-6">
         <div className="max-w-7xl mx-auto">
           <p className="uppercase tracking-[0.35em] text-sm mb-5 opacity-60 fade-up">
             Галерия
           </p>
 
-          <h1 className="luxury-heading text-5xl md:text-8xl font-light mb-10 leading-[0.98] tracking-[0] fade-up">
+          <h1 className="luxury-heading text-5xl md:text-7xl font-light mb-8 leading-tight fade-up">
             The NUVÉ
             <br />
             Lookbook.
           </h1>
 
-          <p className="text-lg opacity-75 max-w-2xl mb-12 md:mb-16 leading-relaxed fade-up">
-            Кадри от салона, финални визии и малки beauty детайли, подредени
-            като редакционен дневник на NUVÉ.
+          <p className="playfair text-lg opacity-75 max-w-2xl mb-14 leading-relaxed fade-up">
+            Подбрани beauty моменти, визии и детайли от света на NUVÉ.
           </p>
 
-          {/* Mobile Gallery */}
-          <div className="grid grid-cols-2 gap-4 md:hidden">
-            {galleryItems.map((item, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-[1.5rem] bg-[#E8DDD1] shadow-lg"
-                style={{ height: item.mobileHeight }}
-              >
-                <Image
-                  src={item.image}
-                  alt={`NUVÉ ${item.label}`}
-                  fill
-                  sizes="50vw"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/55 to-transparent p-3 pt-10">
-                  <p className="text-[0.62rem] uppercase tracking-[0.2em] text-[#F6F1EA]/90">
-                    {item.label}
-                  </p>
-                </div>
-              </div>
-            ))}
+          {/* Category Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+            {categories.map((category) => {
+              const isActive = activeCategory.id === category.id;
+
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category)}
+                  className={`group text-left rounded-[2rem] overflow-hidden border transition-all duration-500 ${
+                    isActive
+                      ? "border-[#4E3B31]/35 shadow-2xl bg-[#EFE5DA]"
+                      : "border-[#4E3B31]/10 bg-[#F6F1EA]/60 hover:-translate-y-2 hover:shadow-xl"
+                  }`}
+                >
+                  <div className="relative h-[230px] md:h-[260px] overflow-hidden">
+                    {category.images.slice(0, 3).map((image, index) => (
+                      <img
+                        key={image}
+                        src={image}
+                        alt={category.title}
+                        className="gallery-slide absolute inset-0 w-full h-full object-cover"
+                        style={{
+                          animationDelay: `${index * 3}s`,
+                        }}
+                      />
+                    ))}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
+                    <div className="absolute bottom-5 left-5 right-5 text-[#F6F1EA]">
+                      <p className="uppercase tracking-[0.3em] text-xs opacity-75 mb-2">
+                        {category.index} • {category.label}
+                      </p>
+
+                      <h2 className="luxury-heading text-4xl font-light leading-none">
+                        {category.title}
+                      </h2>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <p className="playfair text-base leading-relaxed opacity-75">
+                      {category.description}
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
 
-          {/* Desktop Masonry Gallery */}
-          <div className="hidden md:block columns-2 lg:columns-3 gap-6 space-y-6">
-            {galleryItems.map((item, index) => (
-              <div
-                key={index}
-                className="group relative mb-6 break-inside-avoid overflow-hidden rounded-[2rem] bg-[#E8DDD1] shadow-xl luxury-card"
-                style={{ height: item.desktopHeight }}
-              >
-                <Image
-                  src={item.image}
-                  alt={`NUVÉ ${item.label}`}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 33vw"
-                  className="image-zoom h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="absolute bottom-6 left-6 right-6 translate-y-3 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <p className="mb-3 text-xs uppercase tracking-[0.28em] text-[#F6F1EA]/75">
-                    0{index + 1}
-                  </p>
-                  <h2 className="luxury-heading text-3xl font-light text-[#F6F1EA]">
-                    {item.label}
-                  </h2>
-                </div>
+          {/* Active Gallery Section */}
+          <div className="border-t border-[#4E3B31]/10 pt-12">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+              <div>
+                <p className="uppercase tracking-[0.35em] text-xs opacity-50 mb-4">
+                  {activeCategory.label}
+                </p>
+
+                <h2 className="luxury-heading text-4xl md:text-6xl font-light">
+                  {activeCategory.title}
+                </h2>
               </div>
-            ))}
+
+              <p className="playfair max-w-md opacity-70 leading-relaxed md:text-right">
+                {activeCategory.description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:hidden gap-4">
+              {activeCategory.images.map((image, index) => (
+                <div
+                  key={image}
+                  className="rounded-[1.5rem] overflow-hidden shadow-lg bg-[#E8DDD1]"
+                  style={{ height: index % 2 === 0 ? 250 : 210 }}
+                >
+                  <img
+                    src={image}
+                    alt={`${activeCategory.title} ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="hidden md:block columns-2 lg:columns-3 gap-6 space-y-6">
+              {activeCategory.images.map((image, index) => (
+                <div
+                  key={image}
+                  className="group break-inside-avoid mb-6 rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] luxury-card"
+                  style={{ height: index % 2 === 0 ? 520 : 400 }}
+                >
+                  <img
+                    src={image}
+                    alt={`${activeCategory.title} ${index + 1}`}
+                    className="image-zoom w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-16 md:mt-20 text-center">
-            <Link
+          <div className="mt-20 text-center">
+            <a
               href="/contact"
-              className="group premium-button border-[#4E3B31]/25 bg-[#4E3B31] text-[#F6F1EA] hover:bg-transparent hover:text-[#4E3B31]"
+              className="inline-block bg-[#4E3B31] text-white px-10 py-4 rounded-full hover:scale-105 transition duration-300"
             >
               Запази час
-              <span className="transition-transform duration-500 group-hover:translate-x-2">
-                →
-              </span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
