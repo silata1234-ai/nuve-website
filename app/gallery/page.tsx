@@ -31,13 +31,21 @@ export default function Gallery() {
       images: Array.from({ length: 6 }, (_, i) => `/gallery/nails/nails${i + 1}.jpg`),
     },
     {
-      id: "lashes",
-      index: "04",
-      label: "Мигли и вежди",
-      title: "Lashes & Brows",
-      description: "Естествено подчертаване, баланс и изразителност без тежест.",
-      images: Array.from({ length: 7 }, (_, i) => `/gallery/lashes/lashes${i + 1}.jpg`),
-    },
+  id: "lashes",
+  index: "04",
+  label: "Мигли и вежди",
+  title: "Lashes & Brows",
+  description: "Естествено подчертаване, баланс и изразителност без тежест.",
+  images: [
+    "/gallery/lashes/lashes1.jpg",
+    "/gallery/lashes/lashes2.jpg",
+    "/gallery/lashes/lashes3.jpg",
+    "/gallery/lashes/lashes4a.jpg",
+    "/gallery/lashes/lashes5.jpg",
+    "/gallery/lashes/lashes6.jpg",
+    "/gallery/lashes/lashes7.jpg",
+  ],
+},
   ];
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);
