@@ -9,10 +9,10 @@ export default function Gallery() {
     {
       id: "hair",
       index: "01",
-      label: "Фризьор",
+      label: "Фризьорство",
       title: "Hair",
       description: "Цвят, форма и стайлинг, създадени с внимание към движението и личния стил.",
-      images: ["/gallery/hair-1.jpg", "/gallery/hair-2.jpg", "/gallery/color-1.jpg"],
+      images: Array.from({ length: 10 }, (_, i) => `/gallery/hair/hair${i + 1}.jpg`),
     },
     {
       id: "makeup",
@@ -20,7 +20,7 @@ export default function Gallery() {
       label: "Грим",
       title: "Makeup",
       description: "Soft glam, булчински визии и събитийна красота с премерен, фотогеничен финал.",
-      images: ["/gallery/makeup-1.jpg", "/gallery/bridal-1.jpg"],
+      images: Array.from({ length: 7 }, (_, i) => `/gallery/makeup/makeup${i + 1}.jpg`),
     },
     {
       id: "nails",
@@ -28,7 +28,7 @@ export default function Gallery() {
       label: "Маникюр",
       title: "Nails",
       description: "Чисти линии, деликатен блясък и детайл, който завършва цялостното усещане.",
-      images: ["/gallery/detail-1.jpg", "/gallery/salon-1.jpg"],
+      images: Array.from({ length: 6 }, (_, i) => `/gallery/nails/nails${i + 1}.jpg`),
     },
     {
       id: "lashes",
@@ -36,7 +36,7 @@ export default function Gallery() {
       label: "Мигли и вежди",
       title: "Lashes & Brows",
       description: "Естествено подчертаване, баланс и изразителност без тежест.",
-      images: ["/gallery/lashes-1.jpg", "/gallery/brows-1.jpg"],
+      images: Array.from({ length: 7 }, (_, i) => `/gallery/lashes/lashes${i + 1}.jpg`),
     },
   ];
 
@@ -66,6 +66,7 @@ export default function Gallery() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
             {categories.map((category) => {
               const isActive = activeCategory.id === category.id;
+              const previewImages = category.images.slice(0, 3);
 
               return (
                 <button
@@ -77,23 +78,28 @@ export default function Gallery() {
                       : "border-[#4E3B31]/10 bg-[#F6F1EA]/60 hover:-translate-y-2 hover:shadow-xl"
                   }`}
                 >
-                  <div className="relative h-[230px] md:h-[260px] overflow-hidden">
-                    {category.images.slice(0, 3).map((image, index) => (
+                  <div className="relative h-[260px] overflow-hidden px-5 pt-8">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#EFE5DA] to-[#D8C8BA]" />
+
+                    {previewImages.map((image, index) => (
                       <img
                         key={image}
                         src={image}
                         alt={category.title}
-                        className="gallery-slide absolute inset-0 w-full h-full object-cover"
-                        style={{
-                          animationDelay: `${index * 3}s`,
-                        }}
+                        className={`absolute rounded-[1.3rem] object-cover shadow-2xl transition-all duration-700 group-hover:scale-[1.03] ${
+                          index === 0
+                            ? "left-6 top-10 h-[170px] w-[120px] rotate-[-7deg] z-10"
+                            : index === 1
+                            ? "left-1/2 top-5 h-[190px] w-[130px] -translate-x-1/2 rotate-[3deg] z-20"
+                            : "right-6 top-12 h-[165px] w-[115px] rotate-[8deg] z-10"
+                        }`}
                       />
                     ))}
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
 
-                    <div className="absolute bottom-5 left-5 right-5 text-[#F6F1EA]">
-                      <p className="uppercase tracking-[0.3em] text-xs opacity-75 mb-2">
+                    <div className="absolute bottom-5 left-5 right-5 text-[#F6F1EA] z-30">
+                      <p className="uppercase tracking-[0.3em] text-xs opacity-80 mb-2">
                         {category.index} • {category.label}
                       </p>
 
@@ -113,7 +119,7 @@ export default function Gallery() {
             })}
           </div>
 
-          {/* Active Gallery Section */}
+          {/* Active Category */}
           <div className="border-t border-[#4E3B31]/10 pt-12">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
               <div>
@@ -131,7 +137,8 @@ export default function Gallery() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:hidden gap-4">
+            {/* Mobile Gallery */}
+            <div className="grid grid-cols-2 gap-4 md:hidden">
               {activeCategory.images.map((image, index) => (
                 <div
                   key={image}
@@ -147,12 +154,13 @@ export default function Gallery() {
               ))}
             </div>
 
+            {/* Desktop Masonry */}
             <div className="hidden md:block columns-2 lg:columns-3 gap-6 space-y-6">
               {activeCategory.images.map((image, index) => (
                 <div
                   key={image}
                   className="group break-inside-avoid mb-6 rounded-[2rem] overflow-hidden shadow-xl bg-[#E8DDD1] luxury-card"
-                  style={{ height: index % 2 === 0 ? 520 : 400 }}
+                  style={{ height: index % 3 === 0 ? 540 : index % 3 === 1 ? 420 : 480 }}
                 >
                   <img
                     src={image}

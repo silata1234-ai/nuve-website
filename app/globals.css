@@ -224,29 +224,4 @@ body::before {
   font-weight: 500;
   letter-spacing: -0.06em;
 }
-@keyframes gallerySlide {
-  0% {
-    opacity: 0;
-  }
-  6% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  36% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
-.gallery-slide {
-  opacity: 0;
-  animation: gallerySlide 9s infinite;
-}
-
-.gallery-slide:first-child {
-  opacity: 1;
-}
