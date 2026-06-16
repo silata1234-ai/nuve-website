@@ -87,7 +87,7 @@ export default function Gallery() {
                   }`}
                 >
                   <div className="relative h-[260px] overflow-hidden px-5 pt-8">
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#EFE5DA] to-[#D8C8BA]" />
+                    <div className="absolute inset-0 bg-[#F5F0EA]/95 backdrop-blur-sm" />
 
                     {previewImages.map((image, index) => (
                       <img
@@ -96,25 +96,25 @@ export default function Gallery() {
                         alt={category.title}
                         className={`absolute rounded-[1.3rem] object-cover shadow-2xl transition-all duration-700 group-hover:scale-[1.03] ${
                           index === 0
-                            ? "left-6 top-10 h-[170px] w-[120px] rotate-[-7deg] z-10"
+                            ? "left-6 top-2 h-[170px] w-[120px] rotate-[-7deg] z-10"
                             : index === 1
-                            ? "left-1/2 top-5 h-[190px] w-[130px] -translate-x-1/2 rotate-[3deg] z-20"
-                            : "right-6 top-12 h-[165px] w-[115px] rotate-[8deg] z-10"
+                            ? "left-1/2 top-1 h-[190px] w-[130px] -translate-x-1/2 rotate-[3deg] z-20"
+                            : "right-3 top-3 h-[165px] w-[115px] rotate-[8deg] z-10"
                         }`}
                       />
                     ))}
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+                    
 
-                    <div className="absolute bottom-5 left-5 right-5 text-[#F6F1EA] z-30">
-                      <p className="uppercase tracking-[0.3em] text-xs opacity-80 mb-2">
-                        {category.index} • {category.label}
-                      </p>
+                    <div className="absolute bottom-1 left-5 right-5 z-30 text-[#4E3B31]">
+  <p className="mb-2 text-xs uppercase tracking-[0.3em] text-[#6A564A]/80">
+    {category.index} • {category.label}
+  </p>
 
-                      <h2 className="luxury-heading text-4xl font-light leading-none">
-                        {category.title}
-                      </h2>
-                    </div>
+  <h2 className="luxury-heading text-4xl font-light leading-none text-[#4E3B31]">
+    {category.title}
+  </h2>
+</div>
                   </div>
 
                   <div className="p-6">
