@@ -81,7 +81,7 @@ export default function About() {
                 <p className="playfair text-lg leading-relaxed opacity-80">
                   Сертифициран Color Expert с международно призната квалификация, специализирана в цветовите трансформации, балеажи и съвременни техники за коса.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-2">
   <a
     // Галина
 href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
@@ -90,6 +90,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
     className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
   >
     Instagram
+    
   </a>
 
   <a
@@ -117,7 +118,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
                   За Ралица гримът е не просто работа, а страст и изкуство, чрез което подчертава уникалната красота на всеки клиент.
                 </p>
                 <p className="italic opacity-70">“Най-благородното изкуство е да правиш другите щастливи.”</p>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-2">
   <a
     href="https://www.instagram.com/ralitsa_makeup/"
     target="_blank"
@@ -168,7 +169,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
                 <p className="playfair text-lg leading-relaxed opacity-80">
                   Специалист по мигли и ламиниране на мигли и вежди, който създава визии, подчертаващи естествената нежност и чар.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap gap-2">
   <a
     href="https://www.instagram.com/ekbeautylb/"
     target="_blank"
@@ -212,7 +213,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   За нея красивите ръце са естествен завършек на безупречната визия и
   отражение на индивидуалния стил.
 </p>
-<div className="mt-8 flex flex-wrap gap-3">
+<div className="mt-8 flex flex-wrap gap-2">
   <a
     href="https://www.instagram.com/houseofnails.byhrisi/"
     target="_blank"
