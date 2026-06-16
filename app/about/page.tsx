@@ -74,7 +74,8 @@ export default function About() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
   <a
-    href="INSTAGRAM_LINK"
+    // Галина
+href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
@@ -102,7 +103,7 @@ export default function About() {
                 <p className="italic opacity-70">“Най-благородното изкуство е да правиш другите щастливи.”</p>
                 <div className="mt-8 flex flex-wrap gap-3">
   <a
-    href="INSTAGRAM_LINK"
+    href="https://www.instagram.com/ralitsa_makeup/"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
@@ -147,7 +148,7 @@ export default function About() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
   <a
-    href="INSTAGRAM_LINK"
+    href="https://www.instagram.com/ekbeautylb/"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
@@ -185,7 +186,7 @@ export default function About() {
 </p>
 <div className="mt-8 flex flex-wrap gap-3">
   <a
-    href="INSTAGRAM_LINK"
+    href="https://www.instagram.com/houseofnails.byhrisi/"
     target="_blank"
     rel="noopener noreferrer"
     className="bg-[#4E3B31] text-[#F6F1EA] px-5 py-3 rounded-full hover:scale-105 transition duration-300"
