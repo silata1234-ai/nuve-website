@@ -138,6 +138,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   href="tel:+359 898 710 254"
   className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
 >
+  <Phone size={16} className="mr-2" />
   Обади се
 </a>
 </div>
@@ -189,6 +190,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   href="tel:+359 878 274 403"
   className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
 >
+  <Phone size={16} className="mr-2" />
   Обади се
 </a>
 </div>
@@ -233,6 +235,7 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   href="tel:+359 898 581 368"
   className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
 >
+  <Phone size={16} className="mr-2" />
   Обади се
 </a>
 </div>
