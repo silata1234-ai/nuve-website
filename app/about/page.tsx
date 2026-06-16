@@ -1,3 +1,4 @@
+import { Phone } from "lucide-react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
@@ -53,16 +54,24 @@ export default function About() {
 
           <div className="space-y-20 md:space-y-28">
             <div className="team-card group grid rounded-[2.5rem] lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div className="team-portrait-stage flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:min-h-[560px] lg:-ml-8 lg:pt-16">
-                <Image
-                  src="/galina.png"
-                  alt="Галина Джилянова"
-                  width={573}
-                  height={822}
-                  priority
-                  className="team-portrait-image h-[390px] w-auto max-w-[92%] object-contain object-bottom md:h-[520px] lg:-mb-10"
-                />
-              </div>
+              <div className="team-portrait-stage relative flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:min-h-[560px] lg:-ml-8 lg:pt-16">
+
+  <div className="absolute inset-0 flex items-center justify-center">
+    <div className="h-[70%] w-[70%] rounded-full bg-white/30 blur-[80px]" />
+  </div>
+
+  <Image
+  
+    src="/galina.png"
+    alt="Галина Джилянова"
+    width={573}
+    height={822}
+    priority
+    className="team-portrait-image relative z-20 h-[390px] w-auto max-w-[92%] object-contain object-bottom md:h-[520px] lg:-mb-10 drop-shadow-[0_25px_35px_rgba(78,59,49,0.10)]"
+    
+  />
+  
+</div>
               <div className="p-8 pt-2 md:p-14 lg:pl-8">
                 <p className="uppercase tracking-[0.3em] text-sm mb-4 opacity-60">Основател • Фризьор</p>
                 <h2 className="luxury-heading mb-6 text-4xl font-light leading-tight md:text-5xl">Галина Джилянова</h2>
@@ -89,6 +98,13 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   >
     Портфолио
   </a>
+  <a
+  href="tel:+359 888 104 488"
+  className="inline-flex items-center gap-2 rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
+>
+  <Phone size={16} />
+  Обади се
+</a>
 </div>
               </div>
             </div>
@@ -117,6 +133,12 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   >
     Портфолио
   </a>
+  <a
+  href="tel:+359 898 710 254"
+  className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
+>
+  Обади се
+</a>
 </div>
               </div>
               <div className="team-portrait-stage order-1 flex min-h-[390px] items-end justify-center px-6 pt-10 md:min-h-[520px] lg:order-2 lg:-mr-8 lg:min-h-[560px] lg:pt-16">
@@ -162,6 +184,12 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   >
     Портфолио
   </a>
+  <a
+  href="tel:+359 878 274 403"
+  className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
+>
+  Обади се
+</a>
 </div>
               </div>
             </div>
@@ -200,6 +228,12 @@ href="https://www.instagram.com/galinadzhilyanov_hairstylist/"
   >
     Портфолио
   </a>
+  <a
+  href="tel:+359 898 581 368"
+  className="inline-flex items-center justify-center rounded-full bg-[#4E3B31] px-5 py-3 text-[#F6F1EA] transition duration-300 hover:scale-105"
+>
+  Обади се
+</a>
 </div>
   </div>
 
